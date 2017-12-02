@@ -24,7 +24,8 @@ public class RNReactNativeGemiusModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void testMethod(String test) {
-    Log.v("Testing Android" + test);
+    private static final String TAG = "MainActivity";
+    Log.v(TAG, "Testing Android" + test);
   }
 
 }
