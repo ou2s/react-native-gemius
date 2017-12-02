@@ -14,7 +14,6 @@ RCT_EXPORT_MODULE()
 
 RCT_EXPORT_METHOD(setAppInfo:(NSString *)app version:(NSString *)version)
 {
-    [[GEMConfig sharedInstance] setLoggingEnabled:YES];
     [[GEMConfig sharedInstance] setAppInfo:app version:version];
 }
 

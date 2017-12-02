@@ -34,9 +34,6 @@ public class RNReactNativeGemiusModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void setAppInfo(String app, String version) {
-    // TO REMOVE
-    com.gemius.sdk.Config.setLoggingEnabled(true);
-
     com.gemius.sdk.Config.setAppInfo(app, version);
   }
 
