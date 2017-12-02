@@ -35,5 +35,6 @@ dependencies {
     compile 'com.facebook.react:react-native:+'
     // CIM
     compile fileTree(dir: 'libs', includes: ['*.jar', 'gemius_mobile_plugin_android/*.jar'])
+    compile 'com.google.android.gms:play-services-base:11.0.4'
 }
   

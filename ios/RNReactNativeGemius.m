@@ -20,7 +20,7 @@ RCT_EXPORT_METHOD(setAppInfo:(NSString *)app version:(NSString *)version)
 
 RCT_EXPORT_METHOD(setGemiusInfo:(NSString *)host scriptIdentifierIos:(NSString *)scriptIdentifierIos scriptIdentifierAndroid:(NSString *)scriptIdentifierAndroid)
 {
-    [[GEMAudienceConfig sharedInstance] setHitCollectorHost:host];
+    [[GEMAudienceConfig sharedInstance] setHitcollectorHost:host];
     [[GEMAudienceConfig sharedInstance] setScriptIdentifier:scriptIdentifierIos];
 }
 
