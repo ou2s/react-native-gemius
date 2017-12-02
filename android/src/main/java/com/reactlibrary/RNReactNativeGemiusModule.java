@@ -19,4 +19,11 @@ public class RNReactNativeGemiusModule extends ReactContextBaseJavaModule {
   public String getName() {
     return "RNReactNativeGemius";
   }
+
+
+  @ReactMethod
+  public void testMethod(String test) {
+    Log.v("Testing Android" + test);
+  }
+
 }

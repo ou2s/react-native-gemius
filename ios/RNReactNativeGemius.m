@@ -7,7 +7,13 @@
 {
     return dispatch_get_main_queue();
 }
+
 RCT_EXPORT_MODULE()
+
+RCT_EXPORT_METHOD(testMethod:(NSString *)test)
+{
+    RCTLogInfo(@"TESTING iOS %@", test);
+}
 
 @end
   
