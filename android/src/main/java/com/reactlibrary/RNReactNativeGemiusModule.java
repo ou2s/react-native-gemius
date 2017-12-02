@@ -49,7 +49,7 @@ public class RNReactNativeGemiusModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void sendPageViewedEvent() {
-    AudienceEvent event = new AudienceEvent(getApplicationContext());
+    AudienceEvent event = new AudienceEvent();
     event.sendEvent();
   }
 
