@@ -7,6 +7,15 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
 import android.util.Log;
 import com.gemius.sdk.*;
+import com.gemius.sdk.Config;
+import com.gemius.sdk.audience.AudienceConfig;
+import com.gemius.sdk.audience.AudienceEvent;
+import com.gemius.sdk.stream.AdData;
+import com.gemius.sdk.stream.AdData.AdType;
+import com.gemius.sdk.stream.EventProgramData;
+import com.gemius.sdk.stream.Player;
+import com.gemius.sdk.stream.PlayerData;
+import com.gemius.sdk.stream.ProgramData;
 
 public class RNReactNativeGemiusModule extends ReactContextBaseJavaModule {
 
@@ -33,14 +42,14 @@ public class RNReactNativeGemiusModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void setGemiusInfo(String host, String scriptIdentifierIos, String scriptIdentifierAndroid) {
-    com.gemius.sdk.AudienceConfig.setHitCollectorHost(host);
-    com.gemius.sdk.AudienceConfig.setScriptIdentifier(scriptIdentifierAndroid);
+    AudienceConfig.setHitCollectorHost(host);
+    AudienceConfig.setScriptIdentifier(scriptIdentifierAndroid);
   }
 
 
   @ReactMethod
   public void sendPageViewedEvent() {
-    AudienceEvent event = new com.gemius.sdk.AudienceEvent(context);
+    AudienceEvent event = new AudienceEvent(context);
     event.setEventType(EventType.FULL_PAGEVIEW);
     event.sendEvent();
   }
