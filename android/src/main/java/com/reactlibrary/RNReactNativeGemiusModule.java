@@ -6,11 +6,11 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
 import android.util.Log;
+import com.gemius.sdk.*;
 
 public class RNReactNativeGemiusModule extends ReactContextBaseJavaModule {
 
   private final ReactApplicationContext reactContext;
-  private static final String TAG = "MainActivity";
 
   public RNReactNativeGemiusModule(ReactApplicationContext reactContext) {
     super(reactContext);
@@ -24,8 +24,25 @@ public class RNReactNativeGemiusModule extends ReactContextBaseJavaModule {
 
 
   @ReactMethod
-  public void testMethod(String test) {
-    Log.v(TAG, "Testing Android" + test);
+  public void setAppInfo(String app, String version) {
+    // TO REMOVE
+    com.gemius.sdk.Config.setLoggingEnabled(true);
+
+    com.gemius.sdk.Config.setAppInfo(app, version);
+  }
+
+  @ReactMethod
+  public void setGemiusInfo(String host, String scriptIdentifierIos, String scriptIdentifierAndroid) {
+    AudienceConfig.setHitCollectorHost(host);
+    AudienceConfig.setScriptIdentifier(scriptIdentifierAndroid);
+  }
+
+
+  @ReactMethod
+  public void sendPageViewedEvent() {
+    AudienceEvent event = new AudienceEvent(context);
+    event.setEventType(EventType.FULL_PAGEVIEW);
+    event.sendEvent();
   }
 
 }

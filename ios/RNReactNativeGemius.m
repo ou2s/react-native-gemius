@@ -1,6 +1,7 @@
 
 #import "RNReactNativeGemius.h"
 #import <React/RCTLog.h>
+#import <GemiusSDK/GemiusSDK.h>
 
 @implementation RNReactNativeGemius
 
@@ -11,10 +12,24 @@
 
 RCT_EXPORT_MODULE()
 
-RCT_EXPORT_METHOD(testMethod:(NSString *)test)
+RCT_EXPORT_METHOD(setAppInfo:(NSString *)app version:(NSString *)version)
 {
-    RCTLogInfo(@"TESTING iOS %@", test);
+    [[GEMConfig sharedInstance] setLoggingEnabled:YES];
+    [[GEMConfig sharedInstance] setAppInfo:app version:version];
 }
 
+RCT_EXPORT_METHOD(setGemiusInfo:(NSString *)host scriptIdentifierIos:(NSString *)scriptIdentifierIos scriptIdentifierAndroid:(NSString *)scriptIdentifierAndroid)
+{
+    [[GEMAudienceConfig sharedInstance] setHitCollectorHost:host];
+    [[GEMAudienceConfig sharedInstance] setScriptIdentifier:scriptIdentifierIos];
+}
+
+
+RCT_EXPORT_METHOD(sendPageViewedEvent)
+{
+    GEMAudienceEvent *event = [GEMAudienceEvent new];
+    [event sendEvent];
+}
+
+
 @end
-  
