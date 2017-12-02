@@ -10,6 +10,7 @@ import android.util.Log;
 public class RNReactNativeGemiusModule extends ReactContextBaseJavaModule {
 
   private final ReactApplicationContext reactContext;
+  private static final String TAG = "MainActivity";
 
   public RNReactNativeGemiusModule(ReactApplicationContext reactContext) {
     super(reactContext);
@@ -24,7 +25,6 @@ public class RNReactNativeGemiusModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void testMethod(String test) {
-    private static final String TAG = "MainActivity";
     Log.v(TAG, "Testing Android" + test);
   }
 
