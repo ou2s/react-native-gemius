@@ -33,14 +33,14 @@ public class RNReactNativeGemiusModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void setGemiusInfo(String host, String scriptIdentifierIos, String scriptIdentifierAndroid) {
-    AudienceConfig.setHitCollectorHost(host);
-    AudienceConfig.setScriptIdentifier(scriptIdentifierAndroid);
+    com.gemius.sdk.AudienceConfig.setHitCollectorHost(host);
+    com.gemius.sdk.AudienceConfig.setScriptIdentifier(scriptIdentifierAndroid);
   }
 
 
   @ReactMethod
   public void sendPageViewedEvent() {
-    AudienceEvent event = new AudienceEvent(context);
+    AudienceEvent event = new com.gemius.sdk.AudienceEvent(context);
     event.setEventType(EventType.FULL_PAGEVIEW);
     event.sendEvent();
   }
