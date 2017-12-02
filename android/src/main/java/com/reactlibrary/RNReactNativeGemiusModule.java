@@ -42,8 +42,8 @@ public class RNReactNativeGemiusModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void setGemiusInfo(String host, String scriptIdentifierIos, String scriptIdentifierAndroid) {
-    AudienceConfig.getSingleton()..setHitCollectorHost(host);
-    AudienceConfig.getSingleton()..setScriptIdentifier(scriptIdentifierAndroid);
+    AudienceConfig.getSingleton().setHitCollectorHost(host);
+    AudienceConfig.getSingleton().setScriptIdentifier(scriptIdentifierAndroid);
   }
 
 
