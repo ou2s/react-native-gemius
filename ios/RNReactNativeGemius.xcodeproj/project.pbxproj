@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B3E7B58A1CC2AC0600A0062D /* RNReactNativeGemius.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNReactNativeGemius.m */; };
-		D5C4198F1FD2EDDE0008941D /* GemiusSDK_NoBitCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C4198D1FD2EDC30008941D /* GemiusSDK_NoBitCode.framework */; };
 		D5C419901FD2EDDE0008941D /* GemiusSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C4198E1FD2EDC30008941D /* GemiusSDK.framework */; };
 		D5C419921FD2EDF40008941D /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C419911FD2EDF40008941D /* AdSupport.framework */; };
 		D5C419941FD2EDFC0008941D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C419931FD2EDFC0008941D /* SystemConfiguration.framework */; };
@@ -30,7 +29,6 @@
 		134814201AA4EA6300B7C361 /* libRNReactNativeGemius.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNReactNativeGemius.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5881CC2AC0600A0062D /* RNReactNativeGemius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNReactNativeGemius.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNReactNativeGemius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNReactNativeGemius.m; sourceTree = "<group>"; };
-		D5C4198D1FD2EDC30008941D /* GemiusSDK_NoBitCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GemiusSDK_NoBitCode.framework; sourceTree = "<group>"; };
 		D5C4198E1FD2EDC30008941D /* GemiusSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GemiusSDK.framework; sourceTree = "<group>"; };
 		D5C419911FD2EDF40008941D /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		D5C419931FD2EDFC0008941D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -43,7 +41,6 @@
 			files = (
 				D5C419941FD2EDFC0008941D /* SystemConfiguration.framework in Frameworks */,
 				D5C419921FD2EDF40008941D /* AdSupport.framework in Frameworks */,
-				D5C4198F1FD2EDDE0008941D /* GemiusSDK_NoBitCode.framework in Frameworks */,
 				D5C419901FD2EDDE0008941D /* GemiusSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,7 +71,6 @@
 			children = (
 				D5C419931FD2EDFC0008941D /* SystemConfiguration.framework */,
 				D5C419911FD2EDF40008941D /* AdSupport.framework */,
-				D5C4198D1FD2EDC30008941D /* GemiusSDK_NoBitCode.framework */,
 				D5C4198E1FD2EDC30008941D /* GemiusSDK.framework */,
 			);
 			path = Frameworks;

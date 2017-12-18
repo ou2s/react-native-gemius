@@ -15,6 +15,7 @@ RCT_EXPORT_MODULE()
 RCT_EXPORT_METHOD(setAppInfo:(NSString *)app version:(NSString *)version)
 {
     [[GEMConfig sharedInstance] setAppInfo:app version:version];
+    [[GEMConfig sharedInstance] setLoggingEnabled:YES];
 }
 
 RCT_EXPORT_METHOD(setGemiusInfo:(NSString *)host scriptIdentifierIos:(NSString *)scriptIdentifierIos scriptIdentifierAndroid:(NSString *)scriptIdentifierAndroid)
