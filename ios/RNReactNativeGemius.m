@@ -14,6 +14,7 @@ RCT_EXPORT_MODULE()
 
 RCT_EXPORT_METHOD(setAppInfo:(NSString *)app version:(NSString *)version)
 {
+    [[GEMConfig sharedInstance] setLoggingEnabled:YES];
     [[GEMConfig sharedInstance] setAppInfo:app version:version];
 }
 
@@ -28,6 +29,11 @@ RCT_EXPORT_METHOD(sendPageViewedEvent)
 {
     GEMAudienceEvent *event = [GEMAudienceEvent new];
     [event sendEvent];
+}
+
+RCT_EXPORT_METHOD(flushBufferWithForce)
+{
+  [GEMAudienceEvent flushBufferWithForce:YES];
 }
 
 

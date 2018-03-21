@@ -50,4 +50,8 @@ public class RNReactNativeGemiusModule extends ReactContextBaseJavaModule {
     event.sendEvent();
   }
 
+  @ReactMethod
+  public void flushBufferWithForce() {
+    // iOS method - should do nothing on Android
+  }
 }
